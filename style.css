@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f6fbff;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-center a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+
+.nav-center .active {
+  color: #0ea5e9;
+  font-weight: 600;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.avatar {
+  background: #0ea5e9;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+
+.greeting {
+  padding: 40px 32px;
+  background: linear-gradient(to right, #e0f2ff, #f6fbff);
+}
+
+.greeting p {
+  color: #666;
+}
+
+.greeting h1 {
+  font-size: 32px;
+}
+
+
+.main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 30px;
+  padding: 40px 32px;
+}
+
+
+.product-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #e0f2ff;
+  color: #0284c7;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.rating {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.product-card img {
+  display: block;
+  margin: 40px auto 20px;
+  height: 220px;
+}
+
+.product-card h2 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity {
+  display: flex;
+  gap: 10px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #e0f2ff;
+  cursor: pointer;
+}
+
+.price {
+  font-size: 28px;
+  color: #0284c7;
+  font-weight: bold;
+}
+
+.price small {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+
+
+.side-panel .card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.slots button {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.slots .active {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+}
+
+
+.book-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.page-header {
+  padding: 50px 32px;
+  text-align: center;
+  background: linear-gradient(to right, #e0f2ff, #f6fbff);
+}
+
+.page-header h1 {
+  font-size: 36px;
+}
+
+.page-header p {
+  color: #666;
+  margin-top: 10px;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px 32px;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+}
+
+.plan-card h2 {
+  font-size: 24px;
+}
+
+.plan-card .desc {
+  color: #666;
+  margin: 5px 0 15px;
+}
+
+.plan-card h3 {
+  font-size: 32px;
+  color: #0284c7;
+}
+
+.plan-card h3 span {
+  font-size: 14px;
+  color: #666;
+}
+
+.plan-card ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.plan-card ul li {
+  margin-bottom: 10px;
+}
+
+.plan-card button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #0ea5e9;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.plan-card.popular {
+  border: 2px solid #0ea5e9;
+}
+
+.plan-card .tag {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #0ea5e9;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.trust-strip {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+  background: white;
+  font-weight: 500;
+}

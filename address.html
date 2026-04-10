@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Address</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 50px;
+      background: #f4f9ff;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 250px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Enter Delivery Details</h2>
+
+  <input type="text" id="name" placeholder="Receiver Name">
+  <input type="text" id="phone" placeholder="Contact Number">
+  <input type="text" id="address" placeholder="Full Address">
+
+  <button onclick="saveAddress()">Save Address</button>
+</div>
+
+<script>
+function saveAddress() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let address = document.getElementById("address").value;
+
+  if (!name || !phone || !address) {
+    alert("Please fill all details!");
+    return;
+  }
+
+  localStorage.setItem("receiverName", name);
+  localStorage.setItem("phone", phone);
+  localStorage.setItem("address", address);
+
+  alert("Address saved!");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

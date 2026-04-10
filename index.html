@@ -10,7 +10,9 @@
 <header class="navbar">
   <div class="nav-left">
     <div class="logo">💧 AquaDrop</div>
-    <div class="location">Delivering to <strong>Ajay Kumar Garg</strong></div>
+    <div class="location" onclick="goToAddress()" style="cursor:pointer;">
+  Delivering to <strong id="userLocation">Select Location</strong>
+</div>
   </div>
 
   <nav class="nav-center">
@@ -21,6 +23,10 @@
   </nav>
 
   <div class="nav-right">
+    <button class="google-btn" onclick="loginWithGoogle()">
+  <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" />
+  Continue with Google
+</button>
   <label class="theme-switch">
   <input type="checkbox" id="darkToggle">
   <span class="slider">
@@ -51,11 +57,13 @@
 
     <div class="price-row">
       <div class="quantity">
-        <button>-</button><span>1</span><button>+</button>
-      </div>
+  <button onclick="decreaseQty()">-</button>
+  <span id="qty">1</span>
+  <button onclick="increaseQty()">+</button>
+</div>
 
       <div class="price">
-        ₹30
+  ₹<span id="price">30</span>
         <small>ISI Certified</small>
       </div>
     </div>
@@ -85,13 +93,13 @@
       </div>
     </div>
 
-    <button class="book-btn" onclick="location.href='track.html'">
+    <button class="book-btn" onclick="goToDetails()">
       Book Delivery · ₹30
     </button>
 
   </div>
 </section>
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 
 </body>
 </html>
